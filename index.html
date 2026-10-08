@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  P23 · Ropa deportiva para gimnasio · Página de una sola hoja
+  ============================================================
+  GUÍA RÁPIDA (usa Ctrl+F y busca la palabra  CAMBIAR):
+    1. CAMBIAR WHATSAPP   -> bloque "CONFIGURACIÓN" al final del archivo (un solo lugar).
+    2. CAMBIAR LOGO       -> dentro del <header>, en la etiqueta <a class="brand">.
+    3. CAMBIAR IMAGEN     -> hay 9 espacios: Inicio (1), Colección (6), Sobre P23 (1) y su proporción está indicada en cada uno.
+    4. CAMBIAR PRODUCTO   -> sección Colección: nombre, descripción, precio de ejemplo ($000 MXN).
+    5. CAMBIAR TEXTO      -> Sobre P23 y Contacto.
+
+  Para publicar en GitHub Pages: sube este archivo con el nombre  index.html
+  (y, si quieres, una carpeta  img/  con tus fotos y tu logo).
+-->
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P23 | Ropa deportiva para gimnasio con diseños originales</title>
+  <meta name="description" content="P23: ropa deportiva para gimnasio con diseños originales y propios. Conoce la colección y haz tu pedido por WhatsApp.">
+  <meta name="theme-color" content="#D6D6D3">
+
+  <!-- Vista previa al compartir el enlace. Cuando tengas logo o imagen, agrega:
+       <meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPO/img/og.jpg"> -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="P23 | Ropa deportiva con diseños originales">
+  <meta property="og:description" content="Ropa deportiva para gimnasio con diseños originales y propios.">
+
+  <!-- Ícono de pestaña provisional (se puede reemplazar por tu logo: <link rel="icon" href="img/favicon.png">) -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&family=Unbounded:wght@400..900&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <style>
+    /* ============================================================
+       1. VARIABLES  (paleta y medidas: cámbialas aquí y se actualiza todo)
+       ============================================================ */
+    :root {
+      --concreto: #D6D6D3;   /* gris principal */
+      --niebla:   #E7E7E5;   /* gris claro */
+      --acero:    #BDBDBA;   /* gris medio (espacios de imagen) */
+      --grafito:  #3A3A39;   /* gris oscuro */
+      --negro:    #000000;
+      --blanco:   #FFFFFF;
+      --texto-suave: #3D3D3B;
+      --linea: rgba(0, 0, 0, .22);
+
+      --font: "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
+      --header-h: 72px;
+      --gutter: clamp(1.25rem, 4vw, 3rem);
+      --max: 1280px;
+      --radio: 2px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+    }
+
+    /* ============================================================
+       2. BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-h);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 1.0625rem;
+      font-stretch: 100%;
+      line-height: 1.6;
+      color: var(--negro);
+      background: var(--concreto);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    body.menu-open { overflow: hidden; }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3, p, ul { margin: 0; }
+    ul { padding: 0; list-style: none; }
+
+    :focus-visible { outline: 3px solid var(--focus, #000); outline-offset: 3px; }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    .skip {
+      position: absolute; left: 1rem; top: -4rem; z-index: 100;
+      padding: .7rem 1rem; border-radius: var(--radio);
+      background: var(--negro); color: var(--blanco);
+      transition: top .2s;
+    }
+    .skip:focus { top: 1rem; }
+
+    /* ============================================================
+       3. COMPONENTES
+       ============================================================ */
+    .ico { width: 1.25em; height: 1.25em; flex: none; }
+
+    /* ---------- Botones animados ----------
+       · Relleno que barre de izquierda a derecha (::before)
+       · Sube un poco con sombra al pasar el mouse
+       · Se hunde al presionar y deja una onda donde tocas (.ripple, vía JavaScript)
+       · El ícono se mueve al pasar el mouse
+       · En escritorio el botón sigue un poco al cursor (efecto imán, vía JavaScript) */
+    .btn {
+      position: relative; overflow: hidden; isolation: isolate;
+      display: inline-flex; align-items: center; justify-content: center; gap: .65rem;
+      min-height: 3.25rem; padding: .8rem 1.6rem;
+      border: 2px solid var(--negro); border-radius: var(--radio);
+      font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      translate: var(--mx, 0px) var(--my, 0px);
+      transition: color .25s var(--ease) .08s, transform .35s var(--ease), box-shadow .35s var(--ease), translate .25s var(--ease);
+    }
+    .btn::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: var(--fill);
+      transform: scaleX(0); transform-origin: right;
+      transition: transform .5s var(--ease);
+    }
+    .btn .ico { transition: transform .45s var(--ease); }
+
+    .btn-solid { --fill: var(--blanco); background: var(--negro); color: var(--blanco); }
+    .btn-line  { --fill: var(--negro);  background: transparent;  color: var(--negro); }
+    .btn-sm { min-height: 2.75rem; padding: .45rem 1.1rem; font-size: .95rem; }
+    .btn-block { width: 100%; }
+
+    /* Teclado y toque: mismo relleno */
+    .btn:focus-visible::before, .btn:active::before { transform: scaleX(1); transform-origin: left; }
+    .btn-solid:focus-visible, .btn-solid:active { color: var(--negro); }
+    .btn-line:focus-visible,  .btn-line:active  { color: var(--blanco); }
+    .btn:active { transform: scale(.96); box-shadow: none; transition-duration: .12s; }
+
+    /* Mouse: relleno, elevación y movimiento del ícono (solo en dispositivos con cursor) */
+    @media (hover: hover) and (pointer: fine) {
+      .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(0, 0, 0, .2); }
+      .btn:hover::before { transform: scaleX(1); transform-origin: left; }
+      .btn-solid:hover { color: var(--negro); }
+      .btn-line:hover  { color: var(--blanco); }
+      .btn:hover .ico-ig { transform: rotate(-14deg) scale(1.22); }
+      .btn:hover .ico-wa { animation: wiggle .75s var(--ease); }
+    }
+
+    /* Brillo que cruza el botón principal cada cierto tiempo */
+    .btn-shine::after {
+      content: ""; position: absolute; top: 0; bottom: 0; left: -60%; z-index: 1; width: 40%;
+      background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .38), transparent);
+      transform: skewX(-20deg); pointer-events: none;
+      animation: shine 5s var(--ease) 2.6s infinite;
+    }
+
+    /* Onda al tocar (se crea con JavaScript) */
+    .ripple {
+      position: absolute; z-index: 0; border-radius: 50%; pointer-events: none;
+      background: currentColor; opacity: .18;
+      transform: scale(0); animation: ripple .65s ease-out forwards;
+    }
+
+    /* Estado "enviando" del botón del formulario */
+    .btn.is-sending::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; height: 4px;
+      background: #8D8D8A; transform-origin: left;
+      animation: progress 2.2s linear forwards;
+    }
+
+    h2, .h2 {
+      font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+      font-stretch: 125%;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: 1;
+    }
+
+    .section { padding-block: clamp(4.5rem, 10vw, 8rem); }
+    .section-head { max-width: 44rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+    .section-head p { margin-top: 1.1rem; color: var(--texto-suave); max-width: 52ch; }
+    .bg-niebla { background: var(--niebla); }
+    .bg-grafito { background: var(--grafito); color: var(--blanco); --focus: #fff; }
+    .bg-grafito .section-head p { color: #D6D6D3; }
+
+    /* Espacios de imagen (proporciones fijas) */
+    .media {
+      position: relative; overflow: hidden;
+      background: var(--acero); border-radius: var(--radio);
+    }
+    .r-4x5 { aspect-ratio: 4 / 5; }
+    .r-3x4 { aspect-ratio: 3 / 4; }
+    .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .ph {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .2rem;
+      color: #2D2D2C; text-align: center;
+      background: repeating-linear-gradient(135deg, rgba(255,255,255,.2) 0 2px, transparent 2px 16px), var(--acero);
+    }
+    .ph .ico { width: 2rem; height: 2rem; margin-bottom: .5rem; opacity: .75; }
+    .ph-ratio { font-weight: 700; font-size: 1rem; }
+    .ph-size { font-size: .85rem; }
+
+    /* ============================================================
+       4. CABECERA Y MENÚ
+       ============================================================ */
+    .site-header { position: fixed; inset: 0 0 auto 0; z-index: 50; }
+    .site-header::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: rgba(214, 214, 211, .9);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      box-shadow: 0 1px 0 var(--linea);
+      opacity: 0; transition: opacity .3s;
+    }
+    .site-header.is-solid::before { opacity: 1; }
+
+    .header-in {
+      height: var(--header-h);
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+
+    .brand { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; }
+    .logo-ph {
+      display: grid; place-items: center; width: 42px; height: 42px;
+      border: 1.5px dashed currentColor; border-radius: var(--radio);
+      font-size: .7rem; font-weight: 600;
+    }
+    .logo-img { height: 42px; width: auto; }
+    .brand-name { font-size: 1.5rem; font-stretch: 125%; font-weight: 900; letter-spacing: -.02em; }
+
+    .nav { display: flex; align-items: center; gap: clamp(1.25rem, 3vw, 2.25rem); }
+    .link {
+      position: relative; padding: .4rem 0;
+      font-weight: 500; text-decoration: none;
+    }
+    .link::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+      background: currentColor; transform: scaleX(0); transform-origin: left;
+      transition: transform .25s var(--ease);
+    }
+    .link:hover::after, .link[aria-current="true"]::after { transform: scaleX(1); }
+
+    .menu-btn {
+      display: none; position: relative; z-index: 2;
+      width: 48px; height: 48px; padding: 0; border: 0;
+      background: transparent; color: inherit; cursor: pointer;
+    }
+    .bars, .bars::before, .bars::after {
+      position: absolute; width: 24px; height: 2px; background: currentColor;
+      transition: transform .3s var(--ease), top .3s var(--ease), background-color .2s;
+    }
+    .bars { left: 12px; top: 23px; }
+    .bars::before, .bars::after { content: ""; left: 0; }
+    .bars::before { top: -7px; }
+    .bars::after  { top: 7px; }
+    @media (hover: hover) and (pointer: fine) {
+      .menu-btn[aria-expanded="false"]:hover .bars::before { top: -9px; }
+      .menu-btn[aria-expanded="false"]:hover .bars::after  { top: 9px; }
+    }
+    .menu-btn[aria-expanded="true"] .bars { background: transparent; }
+    .menu-btn[aria-expanded="true"] .bars::before { top: 0; transform: rotate(45deg); }
+    .menu-btn[aria-expanded="true"] .bars::after  { top: 0; transform: rotate(-45deg); }
+
+    @media (max-width: 860px) {
+      .menu-btn { display: inline-block; }
+      .nav {
+        position: fixed; inset: 0; z-index: 1;
+        flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0;
+        padding: calc(var(--header-h) + 1.25rem) var(--gutter) 2rem;
+        background: var(--concreto);
+        opacity: 0; visibility: hidden; transform: translateY(-8px);
+        transition: opacity .3s var(--ease), transform .3s var(--ease), visibility 0s .3s;
+        overflow-y: auto;
+      }
+      .nav.is-open { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+      .link {
+        padding: .7rem 0; border-bottom: 1px solid var(--linea);
+        font-size: clamp(2rem, 9vw, 3rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.03em; line-height: 1.1;
+      }
+      .link::after { display: none; }
+      .nav .btn { margin-top: 1.75rem; min-height: 3.25rem; font-size: 1.0625rem; }
+    }
+
+    /* ============================================================
+       5. INICIO (hero)
+       ============================================================ */
+    .hero { position: relative; overflow: hidden; background: var(--concreto); }
+    .hero-grid {
+      position: relative;
+      display: grid; grid-template-columns: 1fr; align-items: center;
+      gap: clamp(2.5rem, 6vw, 4rem);
+      min-height: 100vh; min-height: 100svh;
+      padding-top: calc(var(--header-h) + 2rem);
+      padding-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    .wordmark {
+      display: flex;
+      font-size: clamp(6.5rem, 32vw, 15rem);
+      font-stretch: 125%; font-weight: 900; line-height: .8;
+    }
+    .ch { display: block; overflow: hidden; padding: .06em .02em .08em 0; }
+    .ch + .ch { margin-left: -.04em; }
+    .ch b {
+      display: block; font-weight: inherit;
+      transform: translateY(105%);
+      animation: rise 1s var(--ease) calc(var(--i) * 90ms + 150ms) forwards;
+    }
+
+    .hero-tag {
+      margin-top: 1.75rem; max-width: 20ch;
+      font-size: clamp(1.4rem, 2.8vw, 2.1rem); font-stretch: 125%; font-weight: 700;
+      letter-spacing: -.02em; line-height: 1.12;
+    }
+    .hero-text { margin-top: 1.1rem; max-width: 46ch; color: var(--texto-suave); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+
+    .hero-in { animation: fadeUp .9s var(--ease) var(--delay, .5s) both; }
+
+    .hero-media { position: relative; isolation: isolate; width: 100%; max-width: 420px; }
+    /* Disco de pesa detrás de la imagen (decoración) */
+    .hero-media::before, .hero-media::after {
+      content: ""; position: absolute; left: 50%; top: 50%; z-index: -1;
+      aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .hero-media::before { width: 175%; border: clamp(14px, 2.2vw, 28px) solid rgba(255, 255, 255, .42); }
+    .hero-media::after  { width: 135%; border: 2px solid rgba(255, 255, 255, .75); }
+
+    @media (max-width: 899px) {
+      .hero-media::before { width: 138%; }
+      .hero-media::after  { width: 116%; }
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid { grid-template-columns: 1.15fr .85fr; }
+      .wordmark { font-size: clamp(9rem, 15.5vw, 17rem); }
+      .hero-media { justify-self: end; max-width: 440px; }
+    }
+
+    /* ============================================================
+       6. COLECCIÓN
+       ============================================================ */
+    .grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: clamp(2.25rem, 4vw, 3.5rem) clamp(1.25rem, 2.5vw, 2rem);
+    }
+    @media (max-width: 960px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+
+    .product-body { padding-top: 1rem; }
+    .product-top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+    .product h3 { font-size: 1.2rem; font-stretch: 112%; font-weight: 700; letter-spacing: -.01em; line-height: 1.25; }
+    .price { font-weight: 600; white-space: nowrap; }
+    .product-desc { margin: .4rem 0 .5rem; max-width: 36ch; font-size: .98rem; color: var(--texto-suave); }
+    .buy {
+      display: inline-flex; align-items: center; padding: .55rem 0; font-weight: 600; text-decoration: none;
+      background: linear-gradient(currentColor, currentColor) left calc(100% - .4rem) / 100% 2px no-repeat;
+    }
+    /* Raya que crece delante del texto */
+    .buy::before {
+      content: ""; display: inline-block; width: 0; height: 2px; margin-right: 0;
+      background: currentColor;
+      transition: width .4s var(--ease), margin-right .4s var(--ease);
+    }
+    .buy:focus-visible::before, .buy:active::before { width: 1.1rem; margin-right: .55rem; }
+    .buy:active { transform: scale(.97); }
+    @media (hover: hover) and (pointer: fine) {
+      .buy:hover { animation: underline .7s var(--ease); }
+      .buy:hover::before { width: 1.1rem; margin-right: .55rem; }
+    }
+
+    /* ============================================================
+       7. SOBRE P23
+       ============================================================ */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr; align-items: center;
+      gap: clamp(2.5rem, 6vw, 6rem);
+    }
+    .about-media { width: 100%; max-width: 460px; }
+    .about-copy p + p { margin-top: 1rem; }
+    .about-copy .lead { margin-top: 1.5rem; max-width: 52ch; }
+    .about-copy p { max-width: 56ch; }
+
+    .principles { margin-top: 2.5rem; max-width: 44rem; }
+    .principles li {
+      display: grid; grid-template-columns: 1fr; gap: .2rem;
+      padding: 1.1rem 0; border-top: 1px solid rgba(255, 255, 255, .28);
+    }
+    .principles li:last-child { border-bottom: 1px solid rgba(255, 255, 255, .28); }
+    .principles strong { font-stretch: 112%; font-weight: 700; }
+    .principles span { color: #D6D6D3; }
+
+    @media (min-width: 900px) {
+      .about-grid { grid-template-columns: .8fr 1.2fr; }
+      .principles li { grid-template-columns: minmax(9rem, .45fr) 1fr; gap: 1.5rem; }
+    }
+
+    /* ============================================================
+       8. CONTACTO
+       ============================================================ */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr; align-items: start;
+      gap: clamp(2.5rem, 6vw, 5rem);
+    }
+    .contact-lead { margin-top: 1.1rem; max-width: 46ch; color: var(--texto-suave); }
+
+    .contact-list { margin-top: 2.25rem; }
+    .contact-list li {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 1.25rem 0; border-top: 1px solid var(--linea);
+    }
+    .contact-list li:last-child { border-bottom: 1px solid var(--linea); }
+    .c-label { font-size: .92rem; color: var(--texto-suave); }
+    .c-value { font-size: 1.3rem; font-stretch: 112%; font-weight: 700; letter-spacing: -.01em; }
+
+    .form-card { padding: clamp(1.5rem, 4vw, 2.5rem); background: var(--blanco); border-radius: var(--radio); }
+    .form-card h3 { font-size: 1.5rem; font-stretch: 112%; font-weight: 800; letter-spacing: -.02em; margin-bottom: 1.25rem; }
+    .field { margin-bottom: .35rem; }
+    .field label { display: block; margin-bottom: .4rem; font-weight: 600; font-size: .98rem; }
+    .field input, .field textarea {
+      width: 100%; padding: .85rem 1rem;
+      font: inherit; color: var(--negro);
+      background: var(--blanco); border: 1.5px solid #6B6B69; border-radius: var(--radio);
+    }
+    .field textarea { min-height: 7.5rem; resize: vertical; }
+    .field input:focus-visible, .field textarea:focus-visible { outline-offset: 1px; border-color: var(--negro); }
+    .field [aria-invalid="true"] { border-color: #9B1C1C; }
+    .field-error { min-height: 1.4rem; margin-top: .3rem; font-size: .9rem; color: #9B1C1C; }
+    .form-note { margin-top: .9rem; font-size: .92rem; color: var(--texto-suave); }
+
+    @media (min-width: 900px) {
+      .contact-grid { grid-template-columns: 1.05fr .95fr; }
+    }
+
+    /* ============================================================
+       9. PIE DE PÁGINA
+       ============================================================ */
+    .footer { background: var(--negro); color: var(--blanco); --focus: #fff; padding-block: 3rem 2.5rem; }
+    .footer-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem; }
+    .footer-mark { font-size: 1.75rem; font-stretch: 125%; font-weight: 900; letter-spacing: -.02em; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; }
+    .footer-links a { display: inline-flex; align-items: center; gap: .5rem; padding: .4rem 0; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; text-underline-offset: .3em; }
+    .footer-copy { width: 100%; margin-top: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, .25); font-size: .9rem; color: #BDBDBA; }
+
+    /* ============================================================
+       10. BOTÓN FLOTANTE DE WHATSAPP
+       ============================================================ */
+    .wa-float {
+      position: fixed; right: clamp(1rem, 3vw, 1.75rem); bottom: clamp(1rem, 3vw, 1.75rem); z-index: 40;
+      display: flex; align-items: center; justify-content: center;
+      height: 58px; min-width: 58px; padding: 0 14px;
+      border-radius: 999px; background: var(--negro); color: var(--blanco); text-decoration: none;
+      box-shadow: 0 0 0 2px var(--blanco), 0 10px 28px rgba(0, 0, 0, .28);
+      transition: background-color .25s, transform .3s var(--ease);
+    }
+    .wa-float .ico { width: 30px; height: 30px; flex: none; }
+    .wa-float:active { transform: scale(.93); }
+    .wa-float:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--blanco), 0 0 0 6px var(--negro); }
+
+    /* Anillo que late de vez en cuando para llamar la atención */
+    .wa-float::before {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+      border: 2px solid var(--blanco); box-shadow: 0 0 0 2px rgba(0, 0, 0, .35);
+      animation: pulse 4s var(--ease) 3s infinite;
+    }
+
+    /* El círculo se abre y muestra el texto: al pasar el mouse, con el teclado, y una vez al cargar la página */
+    .wa-label {
+      max-width: 0; margin-left: 0; opacity: 0; overflow: hidden; white-space: nowrap;
+      font-weight: 600; font-size: .98rem;
+      transition: max-width .5s var(--ease), margin-left .5s var(--ease), opacity .3s;
+    }
+    .wa-float.is-hint .wa-label, .wa-float:focus-visible .wa-label { max-width: 9rem; margin-left: .6rem; opacity: 1; }
+    @media (hover: hover) and (pointer: fine) {
+      .wa-float:hover { background: var(--grafito); transform: translateY(-3px); }
+      .wa-float:hover .wa-label { max-width: 9rem; margin-left: .6rem; opacity: 1; }
+      .wa-float:hover .ico { animation: wiggle .75s var(--ease); }
+    }
+
+    /* ============================================================
+       11. ANIMACIONES
+       ============================================================ */
+    @keyframes rise   { from { transform: translateY(105%); } to { transform: none; } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0); }
+      20% { transform: rotate(-16deg) scale(1.12); }
+      40% { transform: rotate(12deg) scale(1.12); }
+      60% { transform: rotate(-8deg) scale(1.08); }
+      80% { transform: rotate(4deg); }
+    }
+    @keyframes shine { 0% { left: -60%; } 24%, 100% { left: 130%; } }
+    @keyframes ripple { to { transform: scale(1); opacity: 0; } }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: .9; }
+      35%, 100% { transform: scale(1.7); opacity: 0; }
+    }
+    @keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes underline {
+      0%   { background-size: 100% 2px; background-position: right calc(100% - .4rem); }
+      45%  { background-size: 0 2px;    background-position: right calc(100% - .4rem); }
+      46%  { background-size: 0 2px;    background-position: left calc(100% - .4rem); }
+      100% { background-size: 100% 2px; background-position: left calc(100% - .4rem); }
+    }
+
+    /* Aparición suave al hacer scroll (solo si JavaScript está activo) */
+    .js .reveal {
+      opacity: 0; transform: translateY(14px);
+      transition: opacity .8s var(--ease), transform .8s var(--ease);
+      transition-delay: var(--d, 0ms);
+    }
+    .js .reveal.is-in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .ch b, .hero-in { animation: none; transform: none; opacity: 1; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+      .wa-float, .wa-float:hover { transition: none; transform: none; }
+      .btn, .btn:hover, .btn:active { translate: none; transform: none; box-shadow: none; }
+      .btn::before { transition-duration: .01ms; }
+      .btn-shine::after, .wa-float::before, .btn.is-sending::after { animation: none; }
+      .btn:hover .ico-wa, .wa-float:hover .ico, .buy:hover { animation: none; }
+      .wa-label { transition: none; }
+    }
+    /* ============================================================
+       12. COLOR, LETRAS NUEVAS Y APARICIÓN GRADUAL
+       ============================================================ */
+    :root {
+      --font: "Outfit", "Helvetica Neue", Arial, system-ui, sans-serif;
+      --display: "Unbounded", "Arial Black", Arial, sans-serif;
+      --vivo1: #D92B08; --vivo2: #FF5A2B; --vivo3: #D92B08;
+      --t1: #000; --t2: #6E6E6B; --t3: #000;
+      --texto-suave: #2A2A29;
+    }
+
+    /* Letras: títulos anchos y redondeados, texto limpio */
+    h2, .h2, .wordmark, .hero-tag, .brand-name, .footer-mark, .product h3, .form-card h3, .c-value, .principles strong {
+      font-family: var(--display); font-stretch: 100%;
+    }
+    .brand-name { font-size: 1.25rem; font-weight: 800; }
+    .wordmark { font-size: clamp(5rem, 26vw, 15rem); font-weight: 900; letter-spacing: -.04em; }
+    h2, .h2 { font-size: clamp(1.9rem, 4.6vw, 3.4rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
+    .hero-tag { font-size: clamp(1.1rem, 2.3vw, 1.65rem); font-weight: 600; max-width: 22ch; letter-spacing: -.02em; }
+    .product h3 { font-size: .98rem; font-weight: 600; }
+    .form-card h3 { font-size: 1.2rem; font-weight: 700; }
+    .c-value { font-size: 1.05rem; font-weight: 600; }
+    .principles strong { font-size: .95rem; font-weight: 600; }
+    .footer-mark { font-size: 1.5rem; font-weight: 900; }
+    @media (min-width: 900px) { .wordmark { font-size: clamp(7rem, 14vw, 15rem); } }
+    @media (max-width: 860px) {
+      .link { font-family: var(--display); font-stretch: 100%; font-size: clamp(1.5rem, 7vw, 2.3rem); font-weight: 700; }
+    }
+
+    /* Color en las letras: degradado que fluye */
+    .ch b, h2, .footer-mark {
+      background-image: linear-gradient(95deg, var(--t1), var(--t2), var(--t3), var(--t1));
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent; -webkit-text-fill-color: transparent;
+    }
+    .ch b { animation: rise 1.1s var(--ease) calc(var(--i) * 160ms + 250ms) forwards, flujo 7s linear calc(var(--i) * -1.4s) infinite; }
+    h2, .footer-mark { animation: flujo 9s linear infinite; }
+    .bg-grafito h2, .footer-mark { --t1: #fff; --t2: #9C9C99; --t3: #fff; }
+    .price { color: #C4250A; font-weight: 700; }
+    .product h3 { transition: color .3s; }
+    .product:hover h3 { color: var(--vivo1); }
+    .product .ph { transition: transform .9s var(--ease); }
+    .product:hover .ph { transform: scale(1.07); }
+
+    /* Botones: se quedan en blanco y negro */
+
+    /* Fondo vivo del inicio y discos de la imagen */
+    .hero::before {
+      content: ""; position: absolute; inset: -15%; pointer-events: none;
+      background:
+        radial-gradient(circle at 18% 28%, rgba(255, 255, 255, .6), transparent 42%),
+        radial-gradient(circle at 82% 72%, rgba(58, 58, 57, .18), transparent 42%),
+        radial-gradient(circle at 62% 12%, rgba(255, 255, 255, .45), transparent 38%);
+      animation: deriva 16s ease-in-out infinite alternate;
+    }
+    .hero-media::before { border-color: rgba(255, 255, 255, .55); }
+    .hero-media::after  { border: 2px dashed rgba(217, 43, 8, .85); animation: giro 40s linear infinite; }
+
+    /* Cinta que se desliza entre Inicio y Colección */
+    .marquee { background: var(--negro); color: var(--blanco); overflow: hidden; padding: 1rem 0; }
+    .marquee-track {
+      display: flex; align-items: center; gap: 2rem; width: max-content; padding-right: 2rem;
+      font-family: var(--display); font-weight: 700; font-size: clamp(1rem, 2.4vw, 1.5rem); white-space: nowrap;
+      animation: cinta 32s linear infinite;
+    }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .marquee span:nth-of-type(3n+2) { color: #BDBDBA; }
+    .marquee span:nth-of-type(3n)   { color: #8D8D8A; }
+    .marquee i { flex: none; width: .7em; height: .7em; border-radius: 50%; background: linear-gradient(135deg, var(--vivo1), var(--vivo2), var(--vivo3)); }
+
+    /* Barra de avance al hacer scroll */
+    .progreso {
+      position: fixed; inset: 0 0 auto 0; z-index: 60; height: 4px;
+      transform-origin: left; transform: scaleX(0);
+      background: linear-gradient(90deg, var(--vivo1), var(--vivo2), var(--vivo3));
+    }
+
+    /* Todo aparece poco a poco */
+    .brand, .nav > .link, .nav > .btn { animation: entra .9s var(--ease) both; }
+    .brand { animation-delay: .1s; }
+    .nav > :nth-child(1) { animation-delay: .25s; } .nav > :nth-child(2) { animation-delay: .35s; }
+    .nav > :nth-child(3) { animation-delay: .45s; } .nav > :nth-child(4) { animation-delay: .55s; }
+    .nav > :nth-child(5) { animation-delay: .65s; }
+
+    .hero-in { animation-duration: 1.3s; animation-delay: calc(var(--delay, .5s) + .6s); }
+
+    .js .reveal {
+      opacity: 0; transform: translateY(36px); filter: blur(8px);
+      transition: opacity 1.2s var(--ease), transform 1.2s var(--ease), filter 1.2s var(--ease);
+      transition-delay: var(--d, 0ms);
+    }
+    .js .reveal.is-in { opacity: 1; transform: none; filter: none; }
+
+    .js .reveal h2 { clip-path: inset(0 100% 0 0); transition: clip-path 1.1s var(--ease) .15s; }
+    .js .reveal.is-in h2 { clip-path: inset(-10% -2% -10% -2%); }
+    .js .reveal .media { clip-path: inset(100% 0 0 0); transition: clip-path 1.3s var(--ease) .2s; }
+    .js .reveal.is-in .media { clip-path: inset(0); }
+
+    .js .principles li, .js .contact-list li {
+      opacity: 0; transform: translateX(-28px);
+      transition: opacity .9s var(--ease), transform .9s var(--ease);
+    }
+    .js .reveal.is-in .principles li, .js .reveal.is-in .contact-list li { opacity: 1; transform: none; }
+    .principles li:nth-child(1), .contact-list li:nth-child(1) { transition-delay: .7s; }
+    .principles li:nth-child(2), .contact-list li:nth-child(2) { transition-delay: 1s; }
+    .principles li:nth-child(3) { transition-delay: 1.3s; }
+
+    .js .w {
+      display: inline-block; opacity: 0; transform: translateY(.7em); filter: blur(5px);
+      transition: opacity .8s var(--ease), transform .8s var(--ease), filter .8s var(--ease);
+      transition-delay: calc(min(var(--w, 0), 40) * 40ms + .35s);
+    }
+    .js .reveal.is-in .w { opacity: 1; transform: none; filter: none; }
+
+    @keyframes flujo  { to { background-position: 200% 0; } }
+    @keyframes deriva { from { transform: translate3d(-3%, -2%, 0) scale(1); } to { transform: translate3d(3%, 3%, 0) scale(1.12); } }
+    @keyframes giro   { to { transform: translate(-50%, -50%) rotate(360deg); } }
+    @keyframes cinta  { to { transform: translateX(-50%); } }
+    @keyframes entra  { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: none; } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); filter: blur(10px); } to { opacity: 1; transform: none; filter: none; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ch b, .hero-in, .brand, .nav > .link, .nav > .btn { animation: none; transform: none; opacity: 1; filter: none; }
+      .js .reveal, .js .reveal h2, .js .reveal .media, .js .principles li, .js .contact-list li, .js .w {
+        opacity: 1; transform: none; filter: none; clip-path: none; transition: none;
+      }
+      .hero::before, .hero-media::after, .marquee-track, h2, .footer-mark { animation: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#coleccion">Saltar al contenido</a>
+
+  <!-- Íconos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-wa" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/>
+      </g>
+    </symbol>
+    <symbol id="i-img" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="16" rx="2"/>
+        <circle cx="9" cy="10" r="1.6"/>
+        <path d="m21 16-5-5-8 8"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <!-- ============================================================
+       CABECERA
+       ============================================================ -->
+  <header class="site-header" id="top">
+    <div class="wrap header-in">
+
+      <a class="brand" href="#inicio" aria-label="P23, ir al inicio">
+        <!-- ===== CAMBIAR LOGO =====
+             1) Sube tu logo a la carpeta img/ (por ejemplo img/logo.png).
+             2) Quita los signos de comentario de la línea <img> de abajo.
+             3) Borra la línea <span class="logo-ph">.
+             Si tu logo ya incluye el nombre, también puedes borrar <span class="brand-name">. -->
+        <!-- <img class="logo-img" src="img/logo.png" alt="Logo de P23" height="42"> -->
+        <img class="logo-img" src="data:image/png;base64,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" alt="Logo de P23" height="42" style="height:42px;width:auto;border-radius:2px">
+        <span class="brand-name">P23</span>
+      </a>
+
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a class="link" href="#inicio">Inicio</a>
+        <a class="link" href="#coleccion">Colección</a>
+        <a class="link" href="#sobre">Sobre P23</a>
+        <a class="link" href="#contacto">Contacto</a>
+        <!-- Botón directo a Instagram (el usuario se cambia en CONFIGURACIÓN, al final del archivo) -->
+        <a class="btn btn-line btn-sm" href="https://www.instagram.com/p23_originals/" data-ig>
+          <svg class="ico ico-ig" aria-hidden="true"><use href="#i-ig"/></svg>Instagram
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         INICIO
+         ============================================================ -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-inicio">
+      <div class="wrap hero-grid">
+
+        <div class="hero-copy">
+          <h1 class="wordmark" id="titulo-inicio" aria-label="P23">
+            <span class="ch" aria-hidden="true"><b style="--i:0">P</b></span><span class="ch" aria-hidden="true"><b style="--i:1">2</b></span><span class="ch" aria-hidden="true"><b style="--i:2">3</b></span>
+          </h1>
+          <p class="hero-tag hero-in" style="--delay:.55s">Ropa deportiva con diseño propio.</p>
+          <p class="hero-text hero-in" style="--delay:.65s">Diseños originales creados por nosotros y pensados para tu rutina en el gimnasio.</p>
+          <div class="hero-actions hero-in" style="--delay:.75s">
+            <a class="btn btn-solid btn-shine" href="#coleccion">Ver colección</a>
+            <a class="btn btn-line" href="https://www.instagram.com/p23_originals/" data-ig>
+              <svg class="ico ico-ig" aria-hidden="true"><use href="#i-ig"/></svg>Síguenos en Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media hero-in" style="--delay:.45s">
+          <div class="media r-4x5">
+            <!-- ===== CAMBIAR IMAGEN (Inicio) · Proporción 4:5 (ej. 1200 × 1500 px) =====
+                 Reemplaza el <div class="ph"> completo por:
+                 <img src="img/inicio.jpg" alt="Descripción de la foto" width="1200" height="1500"> -->
+            <div class="ph">
+              <svg class="ico" aria-hidden="true"><use href="#i-img"/></svg>
+              <span class="ph-ratio">Foto 4:5</span>
+              <span class="ph-size">1200 × 1500 px</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Diseño original</span><i></i><span>Hecho para entrenar</span><i></i><span>Estilo sin ruido</span><i></i><span>Diseño original</span><i></i><span>Hecho para entrenar</span><i></i><span>Estilo sin ruido</span><i></i><span>Diseño original</span><i></i><span>Hecho para entrenar</span><i></i><span>Estilo sin ruido</span><i></i><span>Diseño original</span><i></i><span>Hecho para entrenar</span><i></i><span>Estilo sin ruido</span><i></i></div></div>
+
+    <!-- ============================================================
+         COLECCIÓN
+         ============================================================ -->
+    <section class="section bg-niebla" id="coleccion" aria-labelledby="titulo-coleccion">
+      <div class="wrap">
+
+        <div class="section-head reveal">
+          <h2 id="titulo-coleccion">Colección</h2>
+          <!-- CAMBIAR TEXTO: borra esta frase cuando pongas el catálogo real -->
+          <p>Elige tu prenda y pídela por WhatsApp.</p>
+        </div>
+
+        <div class="grid" id="productos" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SOBRE P23
+         ============================================================ -->
+    <section class="section bg-grafito" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="wrap about-grid">
+
+        <div class="about-media reveal">
+          <div class="media r-3x4">
+            <!-- ===== CAMBIAR IMAGEN (Sobre P23) · Proporción 3:4 (ej. 1200 × 1600 px) =====
+                 Reemplaza el <div class="ph"> por: <img src="img/sobre.jpg" alt="Descripción de la foto" width="1200" height="1600" loading="lazy"> -->
+            <div class="ph">
+              <svg class="ico" aria-hidden="true"><use href="#i-img"/></svg>
+              <span class="ph-ratio">Foto 3:4</span>
+              <span class="ph-size">1200 × 1600 px</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-copy reveal" style="--d:120ms">
+          <h2 id="titulo-sobre">Sobre P23</h2>
+          <!-- ===== CAMBIAR TEXTO: aquí puedes contar la historia real de P23 ===== -->
+          <p class="lead">P23 es una marca de ropa deportiva para gimnasio. Diseñamos nuestras propias estampas y las llevamos a prendas pensadas para entrenar.</p>
+          <p>Buscamos ropa que se vea bien dentro y fuera del gimnasio: líneas limpias, colores neutros y diseños que no vas a encontrar en cualquier lado.</p>
+
+          <ul class="principles">
+            <li><strong>Diseño original</strong><span>Cada estampa es creación propia de P23.</span></li>
+            <li><strong>Hecha para entrenar</strong><span>Prendas pensadas para moverte en el gimnasio.</span></li>
+            <li><strong>Estilo sin ruido</strong><span>Diseño sencillo que combina con todo.</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACTO
+         ============================================================ -->
+    <section class="section" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="wrap contact-grid">
+
+        <div class="reveal">
+          <h2 id="titulo-contacto">Contacto</h2>
+          <p class="contact-lead">Escríbenos por WhatsApp o Instagram para pedir una pieza o resolver tus dudas.</p>
+
+          <ul class="contact-list">
+            <li>
+              <div>
+                <p class="c-label">WhatsApp</p>
+                <!-- El número que se muestra se cambia en CONFIGURACIÓN (al final del archivo) -->
+                <p class="c-value" data-wa-display>+52 000 000 0000</p>
+              </div>
+              <a class="btn btn-solid btn-sm" href="#contacto" data-wa>
+                <svg class="ico ico-wa" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp
+              </a>
+            </li>
+            <li>
+              <div>
+                <p class="c-label">Instagram</p>
+                <p class="c-value" data-ig-display>@P23_ORIGINALS</p>
+              </div>
+              <a class="btn btn-line btn-sm" href="https://www.instagram.com/p23_originals/" data-ig>
+                <svg class="ico ico-ig" aria-hidden="true"><use href="#i-ig"/></svg>Ir a Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="form-card reveal" style="--d:120ms">
+          <h3>Envía tu mensaje</h3>
+          <form id="form-contacto" novalidate>
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" aria-describedby="nombre-error">
+              <p class="field-error" id="nombre-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" aria-describedby="mensaje-error"></textarea>
+              <p class="field-error" id="mensaje-error" aria-live="polite"></p>
+            </div>
+            <button class="btn btn-solid btn-block" type="submit">
+              <svg class="ico ico-wa" aria-hidden="true"><use href="#i-wa"/></svg><span class="btn-label">Enviar por WhatsApp</span>
+            </button>
+            <p class="form-note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       PIE DE PÁGINA
+       ============================================================ -->
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <p class="footer-mark">P23</p>
+      <nav class="footer-links" aria-label="Redes y contacto">
+        <a href="https://www.instagram.com/p23_originals/" data-ig>
+          <svg class="ico ico-ig" aria-hidden="true"><use href="#i-ig"/></svg>Instagram
+        </a>
+        <a href="#contacto" data-wa>
+          <svg class="ico ico-wa" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp
+        </a>
+      </nav>
+      <p class="footer-copy">© <span id="anio">2026</span> P23. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       El número NO se cambia aquí: se cambia en CONFIGURACIÓN (al final del archivo).
+       ============================================================ -->
+  <a class="wa-float" href="#contacto" data-wa data-msg="Hola, quiero información sobre la ropa de P23." aria-label="Escribir a P23 por WhatsApp">
+    <svg class="ico ico-wa" aria-hidden="true"><use href="#i-wa"/></svg>
+    <span class="wa-label" aria-hidden="true">Escríbenos</span>
+  </a>
+
+  <script>
+    (() => {
+      /* ============================================================
+         CONFIGURACIÓN  ·  AQUÍ SE CAMBIA EL WHATSAPP
+         ============================================================ */
+      const CONFIG = {
+        // ===== CAMBIAR WHATSAPP =====
+        // Número con lada de país, SOLO dígitos (sin +, espacios ni guiones).
+        // México: 52 + 10 dígitos. Ejemplo: "522721234567".  (Ahora es un número de ejemplo.)
+        whatsapp: "522271099904",
+
+        // Cómo se ve el número escrito en la página (solo texto).
+        whatsappVisible: "+52 227 109 9904",
+
+        // Mensaje que aparece escrito cuando alguien toca un botón de WhatsApp sin mensaje propio.
+        mensajeBase: "Hola, me gustaría información sobre la ropa de P23.",
+
+        // Usuario de Instagram (sin @).
+        instagram: "P23_ORIGINALS"
+      };
+
+      const $  = (sel, ctx = document) => ctx.querySelector(sel);
+      const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+      const waUrl = (texto) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto || CONFIG.mensajeBase)}`;
+
+      /* ---------- Enlaces de WhatsApp e Instagram ---------- */
+      $$("[data-wa]").forEach((a) => {
+        a.href = waUrl(a.dataset.msg);
+        a.target = "_blank";
+        a.rel = "noopener";
+      });
+      $$("[data-ig]").forEach((a) => {
+        a.href = `https://www.instagram.com/${CONFIG.instagram.toLowerCase()}/`;
+        a.target = "_blank";
+        a.rel = "noopener";
+      });
+      $$("[data-wa-display]").forEach((el) => { el.textContent = CONFIG.whatsappVisible; });
+      $$("[data-ig-display]").forEach((el) => { el.textContent = "@" + CONFIG.instagram; });
+
+      const anio = $("#anio");
+      if (anio) anio.textContent = new Date().getFullYear();
+
+      /* ---------- Cabecera: fondo al hacer scroll ---------- */
+      const header = $(".site-header");
+      const onScroll = () => header.classList.toggle("is-solid", window.scrollY > 8);
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      /* ---------- Menú para celular ---------- */
+      const btn = $(".menu-btn");
+      const nav = $("#menu");
+      const setMenu = (abierto) => {
+        nav.classList.toggle("is-open", abierto);
+        btn.setAttribute("aria-expanded", String(abierto));
+        btn.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+        document.body.classList.toggle("menu-open", abierto);
+      };
+      btn.addEventListener("click", () => setMenu(btn.getAttribute("aria-expanded") !== "true"));
+      $$("a", nav).forEach((a) => a.addEventListener("click", () => setMenu(false)));
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true") {
+          setMenu(false);
+          btn.focus();
+        }
+      });
+      window.matchMedia("(min-width: 861px)").addEventListener("change", (e) => {
+        if (e.matches) setMenu(false);
+      });
+
+      /* ---------- Enlace activo según la sección visible ---------- */
+      const links = $$(".nav .link");
+      const porId = new Map(links.map((l) => [l.getAttribute("href").slice(1), l]));
+      if ("IntersectionObserver" in window) {
+        const secciones = new IntersectionObserver((entradas) => {
+          entradas.forEach((en) => {
+            if (!en.isIntersecting) return;
+            links.forEach((l) => l.removeAttribute("aria-current"));
+            const activo = porId.get(en.target.id);
+            if (activo) activo.setAttribute("aria-current", "true");
+          });
+        }, { rootMargin: "-45% 0px -50% 0px" });
+        ["inicio", "coleccion", "sobre", "contacto"].forEach((id) => {
+          const s = document.getElementById(id);
+          if (s) secciones.observe(s);
+        });
+      }
+
+      /* ---------- Aparición suave al hacer scroll ---------- */
+      const items = $$(".reveal");
+      $$(".product").forEach((p, i) => p.style.setProperty("--d", `${(i % 3) * 180}ms`));
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver((entradas, obs) => {
+          entradas.forEach((en) => {
+            if (en.isIntersecting) {
+              en.target.classList.add("is-in");
+              obs.unobserve(en.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+        items.forEach((el) => io.observe(el));
+      } else {
+        items.forEach((el) => el.classList.add("is-in"));
+      }
+
+      /* ---------- Animaciones de botones ---------- */
+      const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const conCursor = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      if (!sinMovimiento) {
+        // Onda al tocar o hacer clic
+        $$(".btn").forEach((b) => {
+          b.addEventListener("pointerdown", (e) => {
+            const r = b.getBoundingClientRect();
+            const d = Math.max(r.width, r.height) * 2;
+            const onda = document.createElement("span");
+            onda.className = "ripple";
+            onda.style.width = onda.style.height = `${d}px`;
+            onda.style.left = `${e.clientX - r.left - d / 2}px`;
+            onda.style.top = `${e.clientY - r.top - d / 2}px`;
+            b.appendChild(onda);
+            onda.addEventListener("animationend", () => onda.remove());
+          });
+        });
+
+        // Efecto imán: en escritorio el botón sigue un poco al cursor
+        if (conCursor) {
+          $$(".btn").forEach((b) => {
+            b.addEventListener("pointermove", (e) => {
+              const r = b.getBoundingClientRect();
+              const x = (e.clientX - r.left) / r.width - 0.5;
+              const y = (e.clientY - r.top) / r.height - 0.5;
+              b.style.setProperty("--mx", `${(x * 10).toFixed(1)}px`);
+              b.style.setProperty("--my", `${(y * 8).toFixed(1)}px`);
+            });
+            b.addEventListener("pointerleave", () => {
+              b.style.removeProperty("--mx");
+              b.style.removeProperty("--my");
+            });
+          });
+        }
+
+        // El botón flotante de WhatsApp se abre una vez para mostrar su texto
+        const flotante = $(".wa-float");
+        setTimeout(() => flotante.classList.add("is-hint"), 2800);
+        setTimeout(() => flotante.classList.remove("is-hint"), 6200);
+      }
+
+      /* ---------- Textos palabra por palabra + barra de avance ---------- */
+      if (!sinMovimiento) {
+        const acumulado = new Map();
+        $$(".section-head p, .contact-lead, .about-copy > p").forEach((p) => {
+          const palabras = p.textContent.trim().split(/\s+/);
+          const base = acumulado.get(p.parentNode) || 0;
+          p.textContent = "";
+          palabras.forEach((t, i) => {
+            const w = document.createElement("span");
+            w.className = "w";
+            w.style.setProperty("--w", base + i);
+            w.textContent = t;
+            p.append(w, " ");
+          });
+          acumulado.set(p.parentNode, base + palabras.length);
+        });
+      }
+      const barra = document.createElement("div");
+      barra.className = "progreso";
+      barra.setAttribute("aria-hidden", "true");
+      document.body.appendChild(barra);
+      const avance = () => {
+        const alto = document.documentElement.scrollHeight - window.innerHeight;
+        barra.style.transform = `scaleX(${alto > 0 ? Math.min(window.scrollY / alto, 1) : 0})`;
+      };
+      avance();
+      window.addEventListener("scroll", avance, { passive: true });
+
+      /* ---------- Formulario: abre WhatsApp con el mensaje ---------- */
+      const form = $("#form-contacto");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nombre = $("#nombre");
+        const mensaje = $("#mensaje");
+        let valido = true;
+
+        [[nombre, "Escribe tu nombre."], [mensaje, "Escribe tu mensaje."]].forEach(([campo, aviso]) => {
+          const vacio = !campo.value.trim();
+          campo.setAttribute("aria-invalid", String(vacio));
+          $(`#${campo.id}-error`).textContent = vacio ? aviso : "";
+          if (vacio && valido) { campo.focus(); valido = false; }
+        });
+        if (!valido) return;
+
+        const a = document.createElement("a");
+        a.href = waUrl(`Hola, soy ${nombre.value.trim()}. ${mensaje.value.trim()}`);
+        a.target = "_blank";
+        a.rel = "noopener";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        form.reset();
+
+        // Aviso en el botón mientras se abre WhatsApp
+        const enviar = $('button[type="submit"]', form);
+        const etiqueta = $(".btn-label", enviar);
+        etiqueta.dataset.texto = etiqueta.dataset.texto || etiqueta.textContent;
+        enviar.classList.add("is-sending");
+        etiqueta.textContent = "Abriendo WhatsApp…";
+        setTimeout(() => {
+          enviar.classList.remove("is-sending");
+          etiqueta.textContent = etiqueta.dataset.texto;
+        }, 2200);
+      });
+    })();
+  </script>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    import { getFirestore, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyBdFIb3dhxZMpwT_YGZHbsJkbVimcks-gk",
+      authDomain: "p23originals.firebaseapp.com",
+      projectId: "p23originals",
+      storageBucket: "p23originals.firebasestorage.app",
+      messagingSenderId: "978692456908",
+      appId: "1:978692456908:web:ab4b2b87af0e31db82dd69"
+    };
+    const WA = "522271099904";
+    const grid = document.getElementById("productos");
+    const esc = (t) => String(t ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const ph = '<div class="ph"><svg class="ico" aria-hidden="true"><use href="#i-img"/></svg><span class="ph-ratio">Foto próximamente</span></div>';
+    const foto = (u) => u.replace("/upload/", "/upload/f_auto,q_auto,w_900/");
+    const card = (p) => {
+      const msg = encodeURIComponent("Hola, quiero pedir: " + p.nombre + (p.precio ? " ($" + Number(p.precio).toLocaleString("es-MX") + " MXN)" : "") + ". Talla: ");
+      const info = [p.drop && "Drop " + p.drop, p.tallas && "Tallas " + p.tallas].filter(Boolean).map(esc).join(" · ");
+      const ok = p.disponible !== false;
+      return '<article class="product reveal is-in"' + (ok ? "" : ' style="opacity:.65"') + '>' +
+        '<div class="media r-4x5">' + (p.foto ? '<img src="' + esc(foto(p.foto)) + '" alt="' + esc(p.nombre) + '" loading="lazy" style="width:100%;height:100%;object-fit:cover">' : ph) + '</div>' +
+        '<div class="product-body"><div class="product-top"><h3>' + esc(p.nombre) + '</h3><p class="price">' + (p.precio ? "$" + Number(p.precio).toLocaleString("es-MX") + " MXN" : "") + '</p></div>' +
+        (p.descripcion ? '<p class="product-desc">' + esc(p.descripcion) + '</p>' : "") +
+        (info ? '<p class="product-desc">' + info + '</p>' : "") +
+        (ok ? '<a class="btn btn-solid btn-sm" href="https://wa.me/' + WA + '?text=' + msg + '" target="_blank" rel="noopener">Pedir por WhatsApp</a>'
+            : '<span class="btn btn-line btn-sm" aria-disabled="true">Agotado</span>') + '</div></article>';
+    };
+    try {
+      onSnapshot(collection(getFirestore(initializeApp(firebaseConfig)), "productos"), (snap) => {
+        const items = snap.docs.map((d) => d.data()).sort((a, b) => (b.creado?.seconds || 0) - (a.creado?.seconds || 0));
+        grid.innerHTML = items.length ? items.map(card).join("") : '<p class="product-desc">Pronto habrá nuevas prendas. Escríbenos por WhatsApp.</p>';
+      }, () => { grid.innerHTML = '<p class="product-desc">No se pudo cargar el catálogo. Recarga la página.</p>'; });
+    } catch (e) { grid.innerHTML = '<p class="product-desc">No se pudo cargar el catálogo.</p>'; }
+  </script>
+</body>
+</html>
